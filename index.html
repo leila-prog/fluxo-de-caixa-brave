@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fluxo de Caixa Semanal — 24 a 28/08/2026</title>
+<title>Fluxo de Caixa Semanal — 31/08 a 04/09/2026</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f3; color: #1a1a1a; padding: 24px 16px; }
@@ -51,7 +51,7 @@
   .note-warn { font-size: 11px; color: #92400e; padding: 8px 12px; background: #fffbeb; border-top: 1px solid #fde68a; font-weight: 500; }
   .tag { display: inline-block; font-size: 10px; font-weight: 500; padding: 2px 7px; border-radius: 99px; background: #f0f0ee; color: #666; white-space: nowrap; }
   .tag-orange { background: #fff0d6; color: #92400e; }
-  .tag-red { background: #fdecea; color: #b52b1e; }
+  .tag-blue { background: #dbeafe; color: #1e40af; }
   .tabs { display: flex; gap: 6px; margin-bottom: 0; flex-wrap: wrap; }
   .tab-btn { padding: 8px 16px; border-radius: 8px 8px 0 0; border: 1px solid #e8e8e6; border-bottom: none; background: #ececea; color: #888; font-size: 13px; font-weight: 500; cursor: pointer; }
   .tab-btn.active { background: #fff; color: #1a1a1a; }
@@ -64,33 +64,33 @@
 <body>
 
 <h1>Fluxo de Caixa Semanal</h1>
-<p class="subtitle">Semana de 24 a 28/08/2026 &nbsp;·&nbsp; Gerado em 24/08/2026</p>
+<p class="subtitle">Semana de 31/08 a 04/09/2026 &nbsp;·&nbsp; Gerado em 31/08/2026</p>
 
 <p class="section-label">Resumo geral</p>
 <div class="metrics">
   <div class="metric blue">
     <div class="lbl">Saldo atual (BTG)</div>
-    <div class="val">R$ 10.624</div>
+    <div class="val">R$ 22.930</div>
     <div class="sub">Disponível em conta agora</div>
   </div>
   <div class="metric green">
-    <div class="lbl">A receber até 28/08</div>
-    <div class="val">R$ 47.538</div>
-    <div class="sub">Clientes + EasyFlow</div>
+    <div class="lbl">A receber até 04/09</div>
+    <div class="val">R$ 24.249</div>
+    <div class="sub">Clientes previstos</div>
   </div>
   <div class="metric red">
     <div class="lbl">Pagamentos em atraso</div>
-    <div class="val">R$ 214.066</div>
-    <div class="sub">45 fornecedores</div>
+    <div class="val">R$ 202.034</div>
+    <div class="sub">47 fornecedores</div>
   </div>
   <div class="metric orange">
-    <div class="lbl">A pagar até 28/08</div>
-    <div class="val">R$ 37.797</div>
-    <div class="sub">Hoje + próximos dias</div>
+    <div class="lbl">A pagar até 04/09</div>
+    <div class="val">R$ 128.622</div>
+    <div class="sub">Hoje (com folha) + próximos dias</div>
   </div>
 </div>
 
-<p class="section-label" style="margin-top:16px;">Saldo estimado em 28/08</p>
+<p class="section-label" style="margin-top:16px;">Saldo estimado em 04/09</p>
 <div class="tabs">
   <button class="tab-btn active" onclick="switchTab('semana', event)">Só a semana</button>
   <button class="tab-btn" onclick="switchTab('atraso', event)">Incluindo atrasados</button>
@@ -99,31 +99,31 @@
 <div class="tab-wrap">
   <div class="tab-panel active" id="tab-semana">
     <div class="tab-inner">
-      <div class="saldo-box saldo-pos" style="margin-bottom:0;">
+      <div class="saldo-box saldo-neg" style="margin-bottom:0;">
         <div>
-          <div class="slbl">Resultado projetado — sem atrasados</div>
-          <div class="ssub">BTG (10.624,15) + recebimentos semana (47.538,33) − pagamentos semana (37.796,67)</div>
+          <div class="slbl">Resultado projetado — sem atrasados e sem folha</div>
+          <div class="ssub">BTG (22.930,73) + recebimentos (27.575,20) − pagamentos semana (128.622,15)</div>
         </div>
-        <div class="sval">+ R$ 20.365,81</div>
+        <div class="sval">− R$ 78.116,22</div>
       </div>
     </div>
-    <div class="note">Recebimentos atrasados de clientes (R$ 11.555,54) já incluídos acima. Os R$ 214.066 de fornecedores não estão incluídos — veja a aba ao lado.</div>
+    <div class="note">Folha (R$ 57.676,91) não incluída — veja aba 🟣. Os R$ 202.034 de fornecedores também não incluídos — veja aba ao lado.</div>
   </div>
   <div class="tab-panel" id="tab-atraso">
     <div class="tab-inner">
       <div class="saldo-box saldo-neg" style="margin-bottom:0;">
         <div>
           <div class="slbl">Resultado real — incluindo atrasados</div>
-          <div class="ssub">Saldo semana (+35.506,11) − fornecedores atrasados (214.066,02)</div>
+          <div class="ssub">Saldo semana (−18.614,52) − fornecedores atrasados (202.034,15)</div>
         </div>
-        <div class="sval">− R$ 178.559,91</div>
+        <div class="sval">− R$ 220.648,67</div>
       </div>
     </div>
     <table>
       <tbody>
-        <tr><td style="padding:8px 10px;font-size:12.5px;">Saldo estimado da semana</td><td class="r amt-green" style="padding:8px 10px;font-size:12.5px;">+ R$ 35.506,11</td></tr>
-        <tr><td style="padding:8px 10px;font-size:12.5px;">Fornecedores em atraso</td><td class="r amt-red" style="padding:8px 10px;font-size:12.5px;">− R$ 214.066,02</td></tr>
-        <tr class="total-row"><td style="padding:8px 10px;">Exposição total</td><td class="r amt-red" style="padding:8px 10px;">− R$ 178.559,91</td></tr>
+        <tr><td style="padding:8px 10px;font-size:12.5px;">Saldo estimado da semana</td><td class="r amt-red" style="padding:8px 10px;font-size:12.5px;">− R$ 18.614,52</td></tr>
+        <tr><td style="padding:8px 10px;font-size:12.5px;">Fornecedores em atraso</td><td class="r amt-red" style="padding:8px 10px;font-size:12.5px;">− R$ 202.034,15</td></tr>
+        <tr class="total-row"><td style="padding:8px 10px;">Exposição total</td><td class="r amt-red" style="padding:8px 10px;">− R$ 220.648,67</td></tr>
       </tbody>
     </table>
     <div class="note">⚠️ Cenário de exposição máxima — considera pagamento integral de todos os atrasados de uma vez.</div>
@@ -138,9 +138,9 @@
         <tr class="row-purple"><td>Caio Anderson Farias Gonçalves</td><td>Distrib. de lucro</td><td class="r amt-purple">R$ 10.000,00</td></tr>
         <tr class="row-purple"><td>Thiago Rodrigues de Castro</td><td>Salários</td><td class="r amt-purple">R$ 4.000,00</td></tr>
         <tr class="row-purple"><td>Maria Clara Medeiros Fonseca</td><td>Salários</td><td class="r amt-purple">R$ 3.000,00</td></tr>
+        <tr class="row-purple"><td>Bruna Marília Sousa dos Santos</td><td>Salários</td><td class="r amt-purple">R$ 3.500,00</td></tr>
         <tr class="row-purple"><td>Maikon Leander Candido</td><td>Salários</td><td class="r amt-purple">R$ 3.500,00</td></tr>
         <tr class="row-purple"><td>Leila Gabriele de Sousa Paulino</td><td>Salários</td><td class="r amt-purple">R$ 3.500,00</td></tr>
-        <tr class="row-purple"><td>Bruna Marília Sousa dos Santos</td><td>Salários</td><td class="r amt-purple">R$ 3.500,00</td></tr>
         <tr class="row-purple"><td>Mariana Ludmilla Silva Lima</td><td>Salários</td><td class="r amt-purple">R$ 2.500,00</td></tr>
         <tr class="row-purple"><td>Leila Carol de Jesus Silva Gonçalves</td><td>Salários</td><td class="r amt-purple">R$ 2.000,00</td></tr>
         <tr class="row-purple"><td>Gabriel Makinski Bendo</td><td>Salários</td><td class="r amt-purple">R$ 2.000,00</td></tr>
@@ -150,14 +150,15 @@
         <tr class="row-purple"><td>Natália Barbosa Gonzaga Duarte</td><td>Salários</td><td class="r amt-purple">R$ 1.400,00</td></tr>
         <tr class="row-purple"><td>Camilly Vitória Parra Machado</td><td>Salários</td><td class="r amt-purple">R$ 1.250,00</td></tr>
         <tr class="row-purple"><td>Emanuel Cesar Chaves Maia Filho</td><td>Salários</td><td class="r amt-purple">R$ 1.750,00</td></tr>
-        <tr class="row-purple"><td>Caju — lançamento 1</td><td>Caju</td><td class="r amt-purple">R$ 1.000,00</td></tr>
-        <tr class="row-purple"><td>Caju — lançamento 2</td><td>Caju</td><td class="r amt-purple">R$ 2.100,00</td></tr>
-        <tr class="row-purple"><td>Bruna Marília Sousa dos Santos</td><td>Ajuda de custos</td><td class="r amt-purple">R$ 600,00</td></tr>
-        <tr class="total-row"><td colspan="2">Total da folha</td><td class="r amt-purple">R$ 57.750,00</td></tr>
-        <tr><td colspan="2" style="font-size:12px;color:#888;padding:8px 10px;">Total sem distribuição de lucro</td><td class="r" style="font-size:12px;color:#888;padding:8px 10px;">R$ 37.750,00</td></tr>
+        <tr class="row-purple"><td>Caio Cesar Valencio O. Alcântara</td><td>Salários</td><td class="r amt-purple">R$ 1.590,91</td></tr>
+        <tr class="row-purple"><td>Maria Clara Medeiros Fonseca</td><td>Comissões</td><td class="r amt-purple">R$ 1.450,00</td></tr>
+        <tr class="row-purple"><td>Caju</td><td>Caju</td><td class="r amt-purple">R$ 3.100,00</td></tr>
+        <tr class="row-purple"><td>Condução setembro</td><td>Condução</td><td class="r amt-purple">R$ 2.636,00</td></tr>
+        <tr class="total-row"><td colspan="2">Total da folha</td><td class="r amt-purple">R$ 62.826,91</td></tr>
+        <tr><td colspan="2" style="font-size:12px;color:#888;padding:8px 10px;">Total sem distribuição de lucro</td><td class="r" style="font-size:12px;color:#888;padding:8px 10px;">R$ 42.826,91</td></tr>
       </tbody>
     </table>
-    <div class="note-warn">⚠️ Não considerado na projeção de caixa. Sem bonificações e comissões nesta quinzena.</div>
+    <div class="note-warn">⚠️ Não incluído na projeção de caixa. Pago via Safra em 31/08.</div>
   </div>
 </div>
 
@@ -171,7 +172,6 @@
     <tbody>
       <tr><td>Microsoft</td><td>08/06</td><td>Softwares</td><td class="r amt-red">R$ 564,14</td></tr>
       <tr><td>Microsoft</td><td>23/06</td><td>Softwares</td><td class="r amt-red">R$ 98,18</td></tr>
-      <tr><td>Assoc. Olhar de Bia</td><td>26/06</td><td>Doações</td><td class="r amt-red">R$ 3.000,00</td></tr>
       <tr><td>Money Reports</td><td>29/06</td><td>Construção de imagem</td><td class="r amt-red">R$ 27.000,00</td></tr>
       <tr><td>Oracle Netsuite</td><td>30/06</td><td>Softwares</td><td class="r amt-red">R$ 9.550,00</td></tr>
       <tr><td>Alta Close</td><td>30/06</td><td>Treinamento</td><td class="r amt-red">R$ 7.000,00</td></tr>
@@ -181,83 +181,130 @@
       <tr><td>Receita Federal</td><td>19/07</td><td>INSS</td><td class="r amt-red">R$ 660,00</td></tr>
       <tr><td>Altus Home Negócios</td><td>20/07</td><td>Desp. de Viagens</td><td class="r amt-red">R$ 18.600,00</td></tr>
       <tr><td>Altus Home Negócios</td><td>20/07</td><td>Desp. de Viagens</td><td class="r amt-red">R$ 800,00</td></tr>
-      <tr><td>M Contábil</td><td>20/07</td><td>Contabilidade</td><td class="r amt-red">R$ 1.621,00</td></tr>
       <tr><td>Alta Close</td><td>20/07</td><td>Treinamento</td><td class="r amt-red">R$ 7.000,00</td></tr>
+      <tr><td>M Contábil</td><td>20/07</td><td>Contabilidade</td><td class="r amt-red">R$ 1.621,00</td></tr>
       <tr><td>Receita Federal</td><td>20/07</td><td>Simples Nacional</td><td class="r amt-red">R$ 9.697,66</td></tr>
       <tr><td>Microsoft</td><td>23/07</td><td>Softwares</td><td class="r amt-red">R$ 98,18</td></tr>
       <tr><td>G4 Educação</td><td>27/07</td><td>Cursos/Trein.</td><td class="r amt-red">R$ 5.305,42</td></tr>
-      <tr><td>Assoc. Olhar de Bia</td><td>27/07</td><td>Doações</td><td class="r amt-red">R$ 3.000,00</td></tr>
-      <tr><td>VM Turismo</td><td>30/07</td><td>Desp. de Viagens</td><td class="r amt-red">R$ 16.633,90</td></tr>
       <tr><td>Receita Federal</td><td>30/07</td><td>INSS</td><td class="r amt-red">R$ 502,12</td></tr>
-      <tr><td>Turbo Cloud</td><td>01/08</td><td>Softwares</td><td class="r amt-red">R$ 189,00</td></tr>
+      <tr><td>VM Turismo</td><td>30/07</td><td>Desp. de Viagens</td><td class="r amt-red">R$ 16.633,90</td></tr>
       <tr><td>G4 Club</td><td>01/08</td><td>Treinamento</td><td class="r amt-red">R$ 25.000,00</td></tr>
-      <tr><td>Nancy E. M. Tinel</td><td>05/08</td><td>Aluguel</td><td class="r amt-red">R$ 1.800,00</td></tr>
+      <tr><td>Turbo Cloud</td><td>01/08</td><td>Softwares</td><td class="r amt-red">R$ 189,00</td></tr>
       <tr><td>Clicksign</td><td>05/08</td><td>Softwares</td><td class="r amt-red">R$ 100,00</td></tr>
+      <tr><td>Nancy E. M. Tinel</td><td>05/08</td><td>Aluguel</td><td class="r amt-red">R$ 1.800,00</td></tr>
       <tr><td>SEFIN Fortaleza</td><td>06/08</td><td>IPTU</td><td class="r amt-red">R$ 88,90</td></tr>
       <tr><td>TMB Serviços</td><td>08/08</td><td>Cursos/Trein.</td><td class="r amt-red">R$ 712,38</td></tr>
       <tr><td>Banco Bradesco S.A.</td><td>10/08</td><td>Carta de crédito</td><td class="r amt-red">R$ 845,41</td></tr>
-      <tr><td>Cond. Torre Sancarlo</td><td>10/08</td><td>Condomínio</td><td class="r amt-red">R$ 1.095,49</td></tr>
       <tr><td>Microsoft</td><td>10/08</td><td>Softwares</td><td class="r amt-red">R$ 564,14</td></tr>
+      <tr><td>Cond. Torre Sancarlo</td><td>10/08</td><td>Condomínio</td><td class="r amt-red">R$ 1.095,49</td></tr>
+      <tr><td>Bradesco Saúde S/A</td><td>10/08</td><td>Acordos</td><td class="r amt-red">R$ 2.905,00</td></tr>
       <tr><td>CM Ibiapina Advogados</td><td>10/08</td><td>Jurídico</td><td class="r amt-red">R$ 2.500,00</td></tr>
       <tr><td>Canva</td><td>11/08</td><td>Softwares</td><td class="r amt-red">R$ 135,00</td></tr>
       <tr><td>Pluga</td><td>13/08</td><td>Softwares</td><td class="r amt-red">R$ 209,00</td></tr>
-      <tr><td>Slack</td><td>18/08</td><td>Softwares</td><td class="r amt-red">—</td></tr>
       <tr><td>Receita Federal</td><td>19/08</td><td>INSS</td><td class="r amt-red">R$ 660,00</td></tr>
-      <tr><td>Club Coworking</td><td>20/08</td><td>Eventos</td><td class="r amt-red">R$ 10.440,00</td></tr>
       <tr><td>Club Coworking</td><td>20/08</td><td>Aluguel</td><td class="r amt-red">R$ 99,00</td></tr>
-      <tr><td>Club Coworking</td><td>20/08</td><td>Aluguel</td><td class="r amt-red">R$ 10.240,60</td></tr>
       <tr><td>Tec Mobile HaaS</td><td>20/08</td><td>Locação equip.</td><td class="r amt-red">R$ 10.535,44</td></tr>
       <tr><td>LF Investimentos</td><td>20/08</td><td>Assessoria</td><td class="r amt-red">R$ 12.000,00</td></tr>
+      <tr><td>Club Coworking</td><td>20/08</td><td>Aluguel</td><td class="r amt-red">R$ 4.722,50</td></tr>
       <tr><td>Receita Federal</td><td>20/08</td><td>Simples Nacional</td><td class="r amt-red">R$ 10.921,08</td></tr>
       <tr><td>M Contábil</td><td>20/08</td><td>Contabilidade</td><td class="r amt-red">R$ 1.621,00</td></tr>
       <tr><td>Pipedrive</td><td>20/08</td><td>Softwares</td><td class="r amt-red">R$ 2.500,00</td></tr>
-      <tr><td>Microsoft</td><td>23/08</td><td>Softwares</td><td class="r amt-red">R$ 98,18</td></tr>
+      <tr><td>Club Coworking</td><td>20/08</td><td>Eventos</td><td class="r amt-red">R$ 10.740,00</td></tr>
       <tr><td>Adobe</td><td>23/08</td><td>Softwares</td><td class="r amt-red">R$ 275,00</td></tr>
-      <tr class="total-row"><td colspan="3">Total em atraso</td><td class="r amt-red">R$ 214.066,02</td></tr>
+      <tr><td>Microsoft</td><td>23/08</td><td>Softwares</td><td class="r amt-red">R$ 98,18</td></tr>
+      <tr><td>G4 Educação</td><td>25/08</td><td>Cursos/Trein.</td><td class="r amt-red">R$ 5.305,42</td></tr>
+      <tr><td>Playbpo</td><td>27/08</td><td>Softwares</td><td class="r amt-red">R$ 490,00</td></tr>
+      <tr><td>Receita Federal</td><td>28/08</td><td>Simples Nacional</td><td class="r amt-red">R$ 968,13</td></tr>
+      <tr><td>Receita Federal</td><td>28/08</td><td>INSS</td><td class="r amt-red">R$ 502,12</td></tr>
+      <tr><td>Firecrawl</td><td>29/08</td><td>Softwares</td><td class="r amt-red">R$ 331,00</td></tr>
+      <tr class="total-row"><td colspan="3">Total em atraso</td><td class="r amt-red">R$ 202.034,15</td></tr>
     </tbody>
   </table>
 </div>
 
 <!-- VENCE HOJE -->
-<p class="section-label" style="margin-top:20px;">🔴 Vence hoje — 24/08/2026</p>
+<div style="background:#fdecea;border:1.5px solid #c0392b;border-radius:10px;padding:14px 16px;margin-top:20px;margin-bottom:8px;">
+  <div style="font-size:13px;font-weight:700;color:#b52b1e;margin-bottom:10px;">🚨 Pagamentos urgentes — hoje 31/08</div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;">
+    <div style="background:#fff;border:1px solid #f5b4ae;border-radius:8px;padding:10px 14px;flex:1;min-width:150px;">
+      <div style="font-size:11px;color:#888;margin-bottom:4px;">Folha (sem distrib. de lucro)</div>
+      <div style="font-size:18px;font-weight:700;color:#b52b1e;">R$ 42.826,91</div>
+      <div style="font-size:11px;color:#aaa;margin-top:2px;">Via Safra</div>
+    </div>
+    <div style="background:#fff;border:1px solid #f5b4ae;border-radius:8px;padding:10px 14px;flex:1;min-width:150px;">
+      <div style="font-size:11px;color:#888;margin-bottom:4px;">Maria Pia Garcia</div>
+      <div style="font-size:18px;font-weight:700;color:#b52b1e;">R$ 15.000,00</div>
+      <div style="font-size:11px;color:#aaa;margin-top:2px;">Distrib. de lucro</div>
+    </div>
+    <div style="background:#fff;border:1px solid #f5b4ae;border-radius:8px;padding:10px 14px;flex:1;min-width:150px;">
+      <div style="font-size:11px;color:#888;margin-bottom:4px;">TJ Estado de Roraima</div>
+      <div style="font-size:18px;font-weight:700;color:#b52b1e;">R$ 7.638,81</div>
+      <div style="font-size:11px;color:#aaa;margin-top:2px;">Acordo Jurídico</div>
+    </div>
+  </div>
+  <div style="font-size:11px;color:#b52b1e;margin-top:10px;font-weight:500;">Total prioritário: R$ 65.465,72</div>
+</div>
+<p class="section-label" style="margin-top:12px;">🔴 Todos os pagamentos de hoje — 31/08/2026</p>
 <div class="card card-warn">
   <table>
     <thead>
       <tr><th>Fornecedor</th><th>Categoria</th><th class="r">Valor</th></tr>
     </thead>
     <tbody>
-      <tr class="row-hoje"><td>Bradesco Saúde S/A</td><td>Acordos</td><td class="r amt-orange">R$ 2.905,00</td></tr>
-      <tr class="row-hoje"><td>Caio Alcântara</td><td>Proporção Caju</td><td class="r amt-orange">R$ 285,70</td></tr>
-      <tr class="total-row"><td colspan="2">Total vence hoje</td><td class="r amt-orange">R$ 3.190,70</td></tr>
+      <tr class="row-hoje"><td>Maria Pia Garcia Zylberstajn</td><td>Distrib. de lucro</td><td class="r amt-orange">R$ 15.000,00</td></tr>
+      <tr class="row-hoje"><td>Sul América Cia. Seguro Saúde</td><td>Plano de saúde</td><td class="r amt-orange">R$ 5.366,33</td></tr>
+      <tr class="row-hoje"><td>TJ Estado de Roraima</td><td>Acordo Jurídico</td><td class="r amt-orange">R$ 7.638,81</td></tr>
+      <tr class="row-hoje"><td>Lolek Viagens</td><td>Desp. de Viagens</td><td class="r amt-orange">R$ 2.903,47</td></tr>
+      <tr class="row-hoje"><td>Caju</td><td>Bonificação</td><td class="r amt-orange">R$ 298,50</td></tr>
+      <tr class="row-hoje"><td>Gabriel Alves Maia da Silva</td><td>Produção de conteúdo</td><td class="r amt-orange">R$ 900,00</td></tr>
+      <tr class="row-hoje"><td>G4 Club</td><td>Treinamento</td><td class="r amt-orange">R$ 25.000,00</td></tr>
+      <tr class="row-purple"><td>Emanuel Cesar Chaves Maia Filho</td><td>Salários · Safra</td><td class="r amt-orange">R$ 1.750,00</td></tr>
+      <tr class="row-purple"><td>Victor Hugo Xavier Gonçalves</td><td>Salários · Safra</td><td class="r amt-orange">R$ 2.000,00</td></tr>
+      <tr class="row-purple"><td>Sávio Coelho Magalhães Filho</td><td>Salários · Safra</td><td class="r amt-orange">R$ 2.250,00</td></tr>
+      <tr class="row-purple"><td>Leila Carol de Jesus Silva Gonçalves</td><td>Salários · Safra</td><td class="r amt-orange">R$ 2.000,00</td></tr>
+      <tr class="row-purple"><td>Natália Barbosa Gonzaga Duarte</td><td>Salários · Safra</td><td class="r amt-orange">R$ 1.400,00</td></tr>
+      <tr class="row-purple"><td>Alicea Caroline Dias de Oliveira</td><td>Salários · Safra</td><td class="r amt-orange">R$ 1.400,00</td></tr>
+      <tr class="row-purple"><td>Gabriel Makinski Bendo</td><td>Salários · Safra</td><td class="r amt-orange">R$ 2.000,00</td></tr>
+      <tr class="row-purple"><td>Leonardo Vieira Leão</td><td>Distrib. de lucro · Safra</td><td class="r amt-orange">R$ 10.000,00</td></tr>
+      <tr class="row-purple"><td>Caio Anderson Farias Gonçalves</td><td>Distrib. de lucro · Safra</td><td class="r amt-orange">R$ 10.000,00</td></tr>
+      <tr class="row-purple"><td>Maria Clara Medeiros Fonseca</td><td>Salários · Safra</td><td class="r amt-orange">R$ 3.000,00</td></tr>
+      <tr class="row-purple"><td>Thiago Rodrigues de Castro</td><td>Salários · Safra</td><td class="r amt-orange">R$ 4.000,00</td></tr>
+      <tr class="row-purple"><td>Caju</td><td>Caju · Safra</td><td class="r amt-orange">R$ 3.100,00</td></tr>
+      <tr class="row-purple"><td>Bruna Marília Sousa dos Santos</td><td>Salários · Safra</td><td class="r amt-orange">R$ 3.500,00</td></tr>
+      <tr class="row-purple"><td>Camilly Vitória Parra Machado</td><td>Salários · Safra</td><td class="r amt-orange">R$ 1.250,00</td></tr>
+      <tr class="row-purple"><td>Leila Gabriele de Sousa Paulino</td><td>Salários · Safra</td><td class="r amt-orange">R$ 3.500,00</td></tr>
+      <tr class="row-purple"><td>Mariana Ludmilla Silva Lima</td><td>Salários · Safra</td><td class="r amt-orange">R$ 2.500,00</td></tr>
+      <tr class="row-purple"><td>Maikon Leander Candido</td><td>Salários · Safra</td><td class="r amt-orange">R$ 3.500,00</td></tr>
+      <tr class="row-purple"><td>Caio Cesar Valencio O. Alcântara</td><td>Salários · Safra</td><td class="r amt-orange">R$ 1.590,91</td></tr>
+      <tr class="row-purple"><td>Maria Clara Medeiros Fonseca</td><td>Comissões · Safra</td><td class="r amt-orange">R$ 1.450,00</td></tr>
+      <tr class="row-purple"><td>Condução setembro</td><td>Condução · Safra</td><td class="r amt-orange">R$ 2.636,00</td></tr>
+      <tr class="total-row"><td colspan="2">Total vence hoje (incl. folha Safra)</td><td class="r amt-orange">R$ 119.933,02</td></tr>
     </tbody>
   </table>
+  <div class="note">Folha de pagamento (R$ 57.676,91) também vence hoje via Safra — ver aba 🟣.</div>
 </div>
 
 <!-- A VENCER -->
-<p class="section-label" style="margin-top:20px;">📅 A vencer — 25 a 28/08/2026</p>
+<p class="section-label" style="margin-top:20px;">📅 A vencer — 01 a 04/09/2026</p>
 <div class="card">
   <table>
     <thead>
       <tr><th>Fornecedor</th><th>Vence em</th><th>Categoria</th><th class="r">Valor</th></tr>
     </thead>
     <tbody>
-      <tr><td>G4 Educação</td><td>25/08</td><td>Cursos/Trein.</td><td class="r">R$ 5.305,42</td></tr>
-      <tr><td>Guilherme Silva dos Anjos</td><td>25/08</td><td>Empréstimos</td><td class="r">R$ 2.000,00</td></tr>
-      <tr><td>Assoc. Olhar de Bia</td><td>26/08</td><td>Doações</td><td class="r">R$ 3.000,00</td></tr>
-      <tr><td>Diego Costa Barros Mello</td><td>26/08</td><td>Eventos</td><td class="r">R$ 4.300,00</td></tr>
-      <tr><td>Gustavo Flauzino Lombardo</td><td>26/08</td><td>Eventos</td><td class="r">R$ 2.900,00</td></tr>
-      <tr><td>Playbpo</td><td>27/08</td><td>Softwares</td><td class="r">R$ 490,00</td></tr>
-      <tr><td>Receita Federal</td><td>28/08</td><td>Simples Nacional</td><td class="r">R$ 968,13</td></tr>
-      <tr><td>Receita Federal</td><td>28/08</td><td>INSS</td><td class="r">R$ 502,12</td></tr>
-      <tr><td>Firecrawl</td><td>29/08</td><td>Softwares</td><td class="r">R$ 331,00</td></tr>
-      <tr><td>Maria Pia Garcia Zylberstajn</td><td>29/08</td><td>Distrib. de lucro</td><td class="r">R$ 15.000,00</td></tr>
-      <tr class="total-row"><td colspan="3">Total a vencer (25–29/08)</td><td class="r">R$ 34.796,67</td></tr>
+      <tr><td>Digital Ocean</td><td>01/09</td><td>Softwares</td><td class="r">R$ 150,00</td></tr>
+      <tr><td>Turbo Cloud</td><td>01/09</td><td>Softwares</td><td class="r">R$ 189,00</td></tr>
+      <tr><td>Guilherme Silva dos Anjos</td><td>01/09</td><td>Empréstimos</td><td class="r">R$ 5.500,00</td></tr>
+      <tr><td>Typeform</td><td>02/09</td><td>Softwares</td><td class="r">R$ 600,00</td></tr>
+      <tr><td>Turbo Scribe</td><td>04/09</td><td>Softwares</td><td class="r">R$ 120,00</td></tr>
+      <tr><td>Gabriel Makinski Bendo</td><td>04/09</td><td>Reembolso <span class="tag tag-blue">Claude, Codex, ChatGPT</span></td><td class="r">R$ 2.130,13</td></tr>
+      <tr class="total-row"><td colspan="3">Total a vencer (01–04/09)</td><td class="r">R$ 8.689,13</td></tr>
     </tbody>
   </table>
 </div>
 
 <!-- RECEBIMENTOS -->
-<p class="section-label" style="margin-top:20px;">✅ Recebimentos previstos até 28/08</p>
+<p class="section-label" style="margin-top:20px;">✅ Recebimentos previstos até 04/09</p>
 <div class="card card-green">
   <table>
     <thead>
@@ -265,22 +312,19 @@
     </thead>
     <tbody>
       <tr class="row-atr"><td>Empório Zafferano</td><td>BPO Financeiro · <span class="tag">atrasado 03/08</span></td><td class="r amt-red">R$ 2.500,00</td></tr>
-      <tr class="row-atr"><td>Pedrasa Soluções</td><td>PAF · <span class="tag">atrasado 05/08</span></td><td class="r amt-red">R$ 2.888,88</td></tr>
       <tr class="row-atr"><td>Lojão da Construção</td><td>Consultoria Fin. · <span class="tag">atrasado 13/08</span></td><td class="r amt-red">R$ 2.666,66</td></tr>
       <tr class="row-atr"><td>Auto Posto Palermo</td><td>Consultoria Start · <span class="tag">atrasado 20/08</span></td><td class="r amt-red">R$ 3.500,00</td></tr>
-      <tr class="row-hoje"><td>Aro Sport</td><td>Consultoria Start · hoje</td><td class="r amt-green">R$ 3.000,00</td></tr>
-      <tr class="row-hoje"><td>Club Mais Restaurante</td><td>BPO Financeiro · hoje <span class="tag tag-orange">verificar projeto</span></td><td class="r amt-green">R$ 2.000,00</td></tr>
-      <tr class="row-hoje"><td>TioChicoShop</td><td>Consultoria Fin. · hoje</td><td class="r amt-green">R$ 3.000,00</td></tr>
-      <tr class="row-hoje"><td>Bigo Imports & Variedades</td><td>Consultoria Fin. · hoje</td><td class="r amt-green">R$ 3.000,00</td></tr>
-      <tr><td>Drogaria Inova</td><td>Prism ERP · 25/08</td><td class="r amt-green">R$ 200,00</td></tr>
-      <tr><td>GC Jeans</td><td>PAF · 26/08</td><td class="r amt-green">R$ 2.500,00</td></tr>
-      <tr><td>Atrium Farmácia</td><td>BPO Financeiro · 28/08</td><td class="r amt-green">R$ 2.000,00</td></tr>
-      <tr><td>Goodbe Centro Bem Estar</td><td>Brave Board · 28/08</td><td class="r amt-green">R$ 2.083,33</td></tr>
-      <tr><td>EasyFlow</td><td>EasyFlow</td><td class="r amt-green">R$ 20.200,46</td></tr>
-      <tr class="total-row"><td colspan="2">Total a receber (incl. atrasados de clientes)</td><td class="r amt-green">R$ 47.538,33</td></tr>
+      <tr class="row-atr"><td>GC Jeans</td><td>PAF · <span class="tag">atrasado 26/08</span></td><td class="r amt-red">R$ 2.500,00</td></tr>
+
+      <tr class="row-atr"><td>Goodbe Centro Bem Estar</td><td>Brave Board · <span class="tag">atrasado 28/08</span></td><td class="r amt-red">R$ 2.083,33</td></tr>
+      <tr class="row-atr"><td>Ceccap</td><td>Brave Board · <span class="tag">atrasado 30/08</span></td><td class="r amt-red">R$ 4.400,00</td></tr>
+      <tr><td>EasyFlow</td><td>EasyFlow · 01/09</td><td class="r amt-green">R$ 1.925,21</td></tr>
+      <tr><td>Rafael Cestas</td><td>BPO Financeiro · 01/09</td><td class="r amt-green">R$ 2.000,00</td></tr>
+      <tr><td>Supermercados Tá Bom</td><td>PAF · 04/09</td><td class="r amt-green">R$ 4.000,00</td></tr>
+      <tr class="total-row"><td colspan="2">Total a receber (incl. atrasados de clientes)</td><td class="r amt-green">R$ 27.575,20</td></tr>
     </tbody>
   </table>
-  <div class="note">Linhas em rosa = recebimentos de clientes em atraso — podem não entrar nesta semana. Ceccap (30/08 · R$ 4.400) vence após sexta.</div>
+  <div class="note">Linhas em rosa = recebimentos de clientes em atraso — podem não entrar nesta semana.</div>
 </div>
 
 <!-- RESUMO FINAL -->
@@ -288,13 +332,14 @@
 <div class="card">
   <table>
     <tbody>
-      <tr><td>Saldo atual (BTG)</td><td class="r amt-blue">+ R$ 10.624,15</td></tr>
-      <tr><td>Total a receber até 28/08 (incl. atrasados de clientes)</td><td class="r amt-green">+ R$ 47.538,33</td></tr>
-      <tr><td>Total a pagar até 29/08 (hoje + próximos dias)</td><td class="r amt-red">− R$ 37.796,67</td></tr>
-      <tr class="total-row"><td>Saldo estimado em 29/08 (excl. atrasados fornecedores)</td><td class="r amt-green">+ R$ 20.365,81</td></tr>
+      <tr><td>Saldo atual (BTG)</td><td class="r amt-blue">+ R$ 22.930,73</td></tr>
+      <tr><td>Recebimentos da semana (clientes em dia)</td><td class="r amt-green">+ R$ 6.000,00</td></tr>
+      <tr><td>Recebimentos em atraso de clientes</td><td class="r amt-orange">+ R$ 19.649,99</td></tr>
+      <tr><td>Total a pagar até 04/09 (hoje com folha + próximos)</td><td class="r amt-red">− R$ 128.622,15</td></tr>
+      <tr class="total-row"><td>Saldo estimado em 04/09 (excl. atrasados fornecedores)</td><td class="r amt-red">− R$ 78.116,22</td></tr>
     </tbody>
   </table>
-  <div class="note">⚠️ R$ 214.066 em atraso de fornecedores não incluídos — veja aba "Incluindo atrasados". Folha 31/08 (R$ 61.750+) na aba 🟣.</div>
+  <div class="note">⚠️ R$ 202.034 em atraso de fornecedores não incluídos — veja aba "Incluindo atrasados". Folha 31/08 (R$ 57.676,91 via Safra) na aba 🟣.</div>
 </div>
 
 <script>
